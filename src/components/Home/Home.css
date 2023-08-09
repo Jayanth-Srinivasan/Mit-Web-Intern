@@ -1,0 +1,18 @@
+.navBar {
+    height: 5rem;
+    background-color: #0F172A;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    color: #CBD5E1;
+    justify-content: space-between;
+}
+.logo-text {
+    font-size: 2rem;
+    color: #CBD5E1;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+}

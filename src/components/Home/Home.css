@@ -16,3 +16,8 @@
     flex-direction: row;
     font-size: 1.2rem;
 }
+.sign-out{
+    margin: 10px;
+    border: 2px;
+    border-color: #CBD5E1;
+}

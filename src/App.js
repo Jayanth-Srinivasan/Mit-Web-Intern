@@ -43,6 +43,7 @@ function App() {
             uid: a.user.uid,
             photo: a.user.photoURL,
         })
+        console.log("adding new user");
 
       })
       

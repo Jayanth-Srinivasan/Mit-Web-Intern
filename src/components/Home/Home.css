@@ -1,54 +1,40 @@
-.navBar{
-    background-color: white;
-}
-.container{
-    margin: 0 auto;
-    width: 100%;
-    padding: 16px;
+.banner-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid #f3f3f3;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    
+    justify-content: center;
 }
-.logo{
-    display: flex;
+.banner {
+    height: 380px;
+    background-color: darkcyan;
+    display: flex ;
+    flex-direction: column;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    gap: 16px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    width: 90%;
+    border-radius: 25px;
 }
-.navItems{
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    list-style: none;
-    
+.shop-text{
+    font-family: 'Tilt Prism', cursive;
+    font-size: 72px;
+    letter-spacing: 5px;
 }
-.menuItems{
-    text-decoration: none;
-    color:cadetblue;
-    font-size: medium;
-    font-weight: 600;
-    transition: all;
+.offer-text{
+    font-family: 'Barriecito', cursive;
+    font-size: 36px;
+    letter-spacing: 2px;
 }
-.menuItems:hover{
-    color: darkcyan;
-}
-.profile{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.button{
-    padding-left: 24px;
-    padding-right: 24px;
+.banner-button {
+    padding-right: 75px;
+    padding-left: 75px;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-radius: 20px;
-    background-color: cadetblue;
-    transition: all;   
+    margin-top: 10px;
+    background-color: black;
+    color: whitesmoke;
+    transition: all;
 }
-.button:hover{
-    background-color:darkcyan;
+.banner-button:hover{
+    color:cadetblue;
 }

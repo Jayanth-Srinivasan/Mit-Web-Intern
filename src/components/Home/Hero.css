@@ -1,0 +1,40 @@
+.hero-container{
+    height: 680px;
+    position: relative;
+    
+}
+.hero-img{
+    opacity: 90%;
+}
+.hero-text{
+    position: absolute;
+    color: white;
+    width: 40%;
+    top: 30%;
+    left: 5%;
+}
+.hero-title{
+    font-size: 54px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.hero-para{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-style: 900;
+}
+.banner-button {
+    padding-right: 75px;
+    padding-left: 75px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 25px;
+    color: whitesmoke;
+    transition: all;
+}
+.banner-button:hover{
+    color:cadetblue;
+}

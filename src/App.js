@@ -6,6 +6,11 @@ import {GoogleAuthProvider,signInWithPopup, signOut} from 'firebase/auth';
 import {auth, db} from './firebase'
 import { useState } from 'react';
 import { doc, setDoc } from 'firebase/firestore';
+import Mens from './components/Mens/Mens';
+import Womens from './components/Womens/Womens';
+import Kids from './components/Kids/Kids';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -27,7 +32,7 @@ function App() {
         },
         {merge: true}
       ).then(async() => {
-        navigate('/home');
+        navigate('/');
         localStorage.setItem(
           "user",
           JSON.stringify({
@@ -61,14 +66,23 @@ function App() {
     .catch((err) => console.log(err));
   }
   return (
+    <>
+    <Header onSignOut={onSignOut} user={user}/>
     <Routes>
       {
         !user?
         <Route path='/' element={<Landing SignIn={SignIn} />} />
         :
-        <Route path='/home' element={<Home onSignOut={onSignOut} user={user}/>}/>
+        <>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/mens' element={<Mens />} />
+        <Route path='/womens' element={<Womens/>}/>
+        <Route path='/kids' element={<Kids/>}/>
+        </>
       }
     </Routes>
+    <Footer/>
+    </>
   );
 }
 

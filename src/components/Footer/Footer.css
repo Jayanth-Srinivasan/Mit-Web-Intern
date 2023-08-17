@@ -1,0 +1,12 @@
+.footer-container{
+    display: flex;
+    padding: 16px;
+    margin-top: 12px;
+    background-color: darkcyan;
+    justify-content: space-between;
+}
+.footer-text{
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+}

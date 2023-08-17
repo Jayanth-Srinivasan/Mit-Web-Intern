@@ -1,0 +1,84 @@
+.shop-section{
+    height: 100vh;
+    
+}
+.section-desc{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.section-title{
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.section-para{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: 900;
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.cards-box{
+    width: 85%;
+    /* background-color: aqua; */
+}
+.card{
+    position: relative;
+    display: block; 
+    width: 18rem; 
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+    transition: all;
+    transition-duration: 500ms;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card-img{
+    height: 18rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content{
+    position: relative;
+    border: 1px;
+    border-color: darkcyan;
+    background-color: whitesmoke;
+    padding: 24px;
+}
+.card-size{
+    letter-spacing: 1px;
+    font-size: 15px
+}
+.card-title{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.card-price{
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.card-button-box{
+    margin-top: 10px;
+}
+.card-button{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 16px;
+    background-color: darkcyan;
+    color: black;
+    transition: all;
+    transition-duration: 500ms;
+}
+.card-button:hover{
+    transform: scale(1.05);
+}

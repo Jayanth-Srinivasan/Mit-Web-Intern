@@ -7,7 +7,7 @@ import Slide1 from '../../assets/Slide1.jpg';
 function BannerCollection() {
   return (
     <section>
-        <div className='conatiner'>
+        <div>
             <div className='banner-text'>
                 <h2 className='banner-title'>New Collections</h2>
                 <p className='banner-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam sed enim in leo facilisis aliquet.</p>
@@ -20,14 +20,14 @@ function BannerCollection() {
                         <button className='content-button'>Shop Now</button>
                     </div>
                 </li>
-                <li className='banner-item'>
+                <li className='banner-item2'>
                     <img className='banner-img' src={Slide2} alt='' width={'100%'}/>
                     <div className='banner-content'>
                         <h3 className='content-title'>Casuals</h3>
                         <button className='content-button'>Shop Now</button>
                     </div>
                 </li>
-                <li className='banner-item'>
+                <li className='banner-item3'>
                     <img className='banner-img' src={Slide1} alt='' width={'100%'}/>
                     <div className='banner-content'>
                         <h3 className='content-title'>Suits</h3>

@@ -12,13 +12,13 @@ function Header({onSignOut,user}) {
           <nav>
             <ul className='navItems'>
               <li>
-                <a href='/' className='menuItems'>Mens</a>
+                <a href='/mens' className='menuItems'>Mens</a>
               </li>
               <li>
-                <a href='/' className='menuItems'>Womens</a>
+                <a href='/womens' className='menuItems'>Womens</a>
               </li>
               <li>
-                <a href='/' className='menuItems'>Kids</a>
+                <a href='/kids' className='menuItems'>Kids</a>
               </li>
             </ul>
           </nav>

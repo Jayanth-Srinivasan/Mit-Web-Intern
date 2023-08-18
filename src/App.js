@@ -11,6 +11,7 @@ import Womens from './components/Womens/Womens';
 import Kids from './components/Kids/Kids';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
         :
         <>
         <Route path='/' element={<Home/>}/>
+        <Route path='/cart' element={<Cart/>}/> 
         <Route path='/mens' element={<Mens />} />
         <Route path='/womens' element={<Womens/>}/>
         <Route path='/kids' element={<Kids/>}/>

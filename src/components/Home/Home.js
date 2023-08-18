@@ -4,7 +4,6 @@ import "./Home.css"
 import Banner from './Banner';
 import Hero from './Hero';
 import BannerCollection from './BannerCollection';
-import Footer from '../Footer/Footer';
 
 
 
@@ -14,7 +13,6 @@ function Home() {
     <Hero/>
     <Banner />
     <BannerCollection/>
-    <Footer/>
     </>
   )
 }

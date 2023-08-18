@@ -24,7 +24,8 @@ function Header({onSignOut,user}) {
           </nav>
         </div>
         <div className='profile'>
-          <svg
+          <a href='/cart'>
+            <svg
             width="28"
             height="28"
             viewBox="0 0 24 24"
@@ -46,6 +47,7 @@ function Header({onSignOut,user}) {
               fill="currentColor"
             />
           </svg>
+          </a>
           <img src={user.photo} alt=''className='pic' width={50} height={50} referrerpolicy="no-referrer" />
           <button onClick={onSignOut} className='button'>Sign Out</button>
         </div>

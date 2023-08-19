@@ -20,6 +20,9 @@ function Header({onSignOut,user}) {
               <li>
                 <a href='/kids' className='menuItems'>Kids</a>
               </li>
+              <li>
+                <a href='/seller' className='menuItems'>Seller</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -48,7 +51,7 @@ function Header({onSignOut,user}) {
             />
           </svg>
           </a>
-          <img src={user.photo} alt=''className='pic' width={50} height={50} referrerpolicy="no-referrer" />
+          <img src={user?.photo} alt=''className='pic' width={50} height={50} referrerpolicy="no-referrer" />
           <button onClick={onSignOut} className='button'>Sign Out</button>
         </div>
       </div>

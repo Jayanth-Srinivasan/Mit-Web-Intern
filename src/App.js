@@ -12,6 +12,7 @@ import Kids from './components/Kids/Kids';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
+import Seller from './components/Seller/Seller';
 
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
         <Route path='/mens' element={<Mens />} />
         <Route path='/womens' element={<Womens/>}/>
         <Route path='/kids' element={<Kids/>}/>
+        <Route path='/seller' element={<Seller/>}/>
         </>
       }
     </Routes>

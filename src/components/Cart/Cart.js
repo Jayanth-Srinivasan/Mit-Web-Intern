@@ -1,6 +1,6 @@
 import React from 'react'
 import './Cart.css';
-import Shirt from '../../assets/Shirt.jpg'
+import Slide1 from '../../assets/Slide1.jpg'
 
 function Cart() {
   return (
@@ -13,7 +13,7 @@ function Cart() {
                 <div className='cart-contents'>
                     <ul className='cart-list'>
                         <li className='cart-item'>
-                            <img className='cart-img' src={Shirt} alt=''/>
+                            <img className='cart-img' src={Slide1} alt=''/>
                             <div>
                                 <h3 className='item-title'>Shirt Name</h3>
                                 <dl className='item-desc'>
@@ -44,7 +44,7 @@ function Cart() {
                             </div>
                         </li>
                         <li className='cart-item'>
-                            <img className='cart-img' src={Shirt} alt=''/>
+                            <img className='cart-img' src={Slide1} alt=''/>
                             <div>
                                 <h3 className='item-title'>Shirt Name</h3>
                                 <dl className='item-desc'>
@@ -75,6 +75,12 @@ function Cart() {
                             </div>
                         </li>
                     </ul>
+                    <div className='price-box'>
+                        <h3 className='total'>Total: $0.00</h3>
+                        <a href='/ThankYou'>
+                        <button className='checkout-button'>Checkout</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

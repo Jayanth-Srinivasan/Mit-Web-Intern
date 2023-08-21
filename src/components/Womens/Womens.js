@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {collection,  onSnapshot } from 'firebase/firestore';
 import {db} from '../../firebase';
 import '../Mens/Mens.css';
-import Shirt from '../../assets/Shirt.jpg'
+
 
 function Womens() {
     const [womensProd,setWomensProd] = useState([]);
@@ -33,7 +33,7 @@ function Womens() {
                 womensProd.map((item,idx) =>(
 
                 <div key={idx} className='card'>
-                    <img className='card-img' src={Shirt} alt=''/>
+                    <img className='card-img' src={item.img} alt=''/>
                     <div className='card-content'>
                         <span className='card-size'>Size: {item.size}</span>
                         <h3 className='card-title'>{item.name}</h3>

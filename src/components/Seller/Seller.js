@@ -1,34 +1,55 @@
 import React, { useRef } from 'react';
 import './Seller.css';
 import { doc, setDoc } from 'firebase/firestore';
-import { db } from '../../firebase';
+import { db, storage } from '../../firebase';
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 
 function Seller() {
 
     const formRef = useRef();
 
-  const addProd = async(e) =>{
+  const addProd = (e) =>{
     e.preventDefault();
     var newProd ={
         name: formRef.current[0].value.trim(),
         size: formRef.current[1].value.trim(),
         price : formRef.current[2].value.trim(),
         tag : formRef.current[3].value.trim(),
+        img : formRef.current[4].files[0]
     }
     console.log(newProd);
-    await setDoc(
-        doc(db,`${newProd.tag}`,newProd.name),
-        {
-          name: newProd.name,
-          size: newProd.size,
-          price: newProd.price,
-          tag: newProd.tag
+
+    const storageRef = ref(storage,`img/${newProd.img.name}`);
+    const uploadTask = uploadBytesResumable(storageRef,newProd.img)
+    uploadTask.on('state_changed',
+        (snapshot) => {
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log('Upload is ' + progress + '% done');
         },
-        {merge: true}
-      ).then(()=>{
-        alert("Product added");
-      }).catch((e)=>console.log(e.message));
-  } 
+        (error) => {
+            console.log(error.message);
+        },
+        () => {
+            getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
+
+                await setDoc(
+                    doc(db,`${newProd.tag}`,newProd.name),
+                    {
+                      name: newProd.name,
+                      size: newProd.size,
+                      price: newProd.price,
+                      tag: newProd.tag,
+                        img: downloadURL
+                    },
+                    {merge: true}
+                  ).then(()=>{
+                    alert("Product added");
+                  }).catch((e)=>console.log(e.message));
+                })
+            }
+        );
+            
+}
   return (
     <section className='seller-container'>
         <div className='form-container'>

@@ -68,3 +68,26 @@
     height: 1.2rem;
     width: 1.2rem;
 }
+.price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+.checkout-button{
+    margin-top: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color:cadetblue;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all;
+    animation-duration: 200ms;
+}
+.checkout-button:hover{
+    background-color: darkcyan;
+    transform: scale(1.1);
+}

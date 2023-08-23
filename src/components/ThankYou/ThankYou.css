@@ -1,0 +1,40 @@
+.thankyou-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankyou-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18%;
+    gap: 12px;
+}
+
+.thankyou-title{
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.thankyou-para{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: 900;
+}
+.thankyou-button{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: darkcyan;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}

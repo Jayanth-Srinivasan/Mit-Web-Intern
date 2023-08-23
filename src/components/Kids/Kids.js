@@ -6,6 +6,16 @@ import '../Mens/Mens.css';
 function Kids() {
     const [kidsProd,setKidsProd] = useState([]);
 
+    const addToCart = (item) => {
+        let cartItems = [];
+        if(localStorage.getItem('cartItems')){
+            cartItems = JSON.parse(localStorage.getItem('cartItems'));
+        }
+        cartItems.push({item});
+        localStorage.setItem('cartItems',JSON.stringify(cartItems));
+        alert("Item added to cart")
+    }
+
     useEffect(()=>{
         const unsub = onSnapshot(
             collection(db,"Kids"),
@@ -38,7 +48,7 @@ function Kids() {
                         <h3 className='card-title'>{item.name}</h3>
                         <p className='card-price'>₹ {item.price}.00</p>
                         <div className='card-button-box'>
-                            <button className='card-button'>Add to Cart</button>
+                            <button onClick={() => addToCart(item)} className='card-button'>Add to Cart</button>
                         </div>
                     </div>
                 
